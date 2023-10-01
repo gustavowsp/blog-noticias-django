@@ -1,0 +1,17 @@
+.form-group ul{
+  padding: unset;
+}
+.help_text{
+  font-size: 0.8em;
+  color: rgb(242, 242, 242);
+  opacity: 0.75;
+}
+.form-group ul li{
+  list-style: none;
+}
+
+.errorlist li{
+  color: rgb(252, 73, 73);
+  font-weight: bold;
+  font-size: 0.85em;
+}

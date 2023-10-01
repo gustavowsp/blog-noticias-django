@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% if title %}
+            {{title}}
+        {% else %}
+            FigNews
+        {% endif %}
+    </title>
+
+
+    <!-- Script para icons do FontAwesome -->
+    <script src="https://kit.fontawesome.com/5b85f063c4.js" crossorigin="anonymous"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'global/css.css' %}">
+    <link rel="stylesheet" href="{% static 'global/form.css' %}">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'global/vendor/css/bootstrap.min.css' %}">
+    
+    <!--Normalize Css-->
+    <link rel="stylesheet" href="{% static 'global/normalize.css' %}">
+
+    {% block 'css' %}{% endblock 'css' %}
+
+</head>
+<body >
+
+    <nav class="navbar navbar-expand-lg mb-5" id="NavBar">
+        <a class="navbar-brand" href="#">
+            <span>F</span>ignews
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+
+            {% if not user.is_authenticated %}
+            <li class="nav-item active">
+              <a class="nav-link" href=" {% url "users:login_user" %}">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href=" {% url "users:create_user" %}">Criar Conta</a>
+            </li>
+            {% else %}
+            <li class="nav-item active">
+              <a class="nav-link" href=" {% url "users:logout_user" %}">Logout</a>
+            </li>
+            {% endif %}
+            <li class="nav-item">
+              <a class="nav-link" href="#">Criar Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ver Posts</a>
+            </li>
+
+          </ul>
+   
+        </div>
+        <div id="perfil">
+            <div class="img-user"></div>
+            <span>Perfil</span>
+          </div>
+      </nav>
+
+    {% block 'body' %}{% endblock 'body' %}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static 'global/vendor/js/bootstrap.min.js' %}"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<div class="container" id="Form">
+
+  <h2>{{title_form}}</h2>
+  <p>{{desc_form}}</p>
+  {% include 'global/partials/__messages.html'%}
+  <form action="{{action_form}}" class='w-50 mt-1' method="post">
+    {% csrf_token %}
+    {% for field in form  %}
+
+      <div class="form-group">
+        <label for="{{field.id_for_label}}">{{field.label}}</label>
+        {{field}}
+
+        {% if not field.errors %}
+        <span class="help_text">
+          {{field.help_text}}
+        </span>
+        {%endif%}
+        
+        {{field.errors}}
+
+
+      </div>
+
+    {% endfor %}
+
+    {{form.non_field_erros}}
+
+    <button class="btn btn-info btn-block">
+      {% if name_button %}
+        {{name_button}}
+      {% else %}
+        <span>Enviar</span>
+      {% endif %}
+    </button>
+
+  </form>
+</div>

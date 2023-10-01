@@ -26,6 +26,9 @@ def login_user(request):
       user = form.get_user()
       login(request,user)
       messages.success(request,'Você está autenticado, parabéns!')
+      return redirect('users:create_perfil_user')
+    else:
+      messages.error(request,'Os dados informados estão incorretos, tente novamente')
 
   context['form'] = form
 
@@ -45,11 +48,11 @@ def create_user(request):
     form = CreateUserForm()
   else:
     form = CreateUserForm(request.POST)
-    
     if form.is_valid():
       form.save()
       messages.success(request, 'Conta criada com sucesso, agora autentique-se!')
-      return redirect('users:login')
+      return redirect('users:login_user')
+
 
   context['form'] = form 
 

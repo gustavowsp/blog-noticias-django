@@ -1,0 +1,48 @@
+body{
+  background-color: #E6E6E6 !important;
+}
+#navbarbox{
+  height: 190px;
+}
+
+#navbarbox, #navbarbox a{
+  color: white !important;
+}
+
+
+#Content{
+  position: relative;
+  top: -30px;
+}
+
+.formbox{
+  background-color: #EBEBF2;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.25);
+
+}
+.data_user{
+  min-height: 440px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formbox .help_text{
+  color: black;
+}
+
+#Form form{
+  width: 100% !important;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.data_user #Form .form-group{
+  max-width: 320px;
+  width: 48%;
+  min-width: 50px;
+  height: 100px;
+}

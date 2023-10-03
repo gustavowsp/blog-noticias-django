@@ -1,0 +1,63 @@
+#sub-navbar{
+  background-color: #D9D9D9;
+  height: 50px;
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.175);
+}
+#sub-navbar ul{
+  list-style-type: none;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#sub-navbar li{
+  float: left;
+  margin: 0px 15px;
+  font-size: 0.8em;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.25s;
+
+}
+#sub-navbar li:hover{
+  border-bottom: 2px solid rgb(35, 35, 35);
+
+}
+
+
+.conta{
+  background-color: #EBEBF2;
+  height: 440px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+
+  position: relative;
+  top: -120px;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.img-user{
+  background-color: rgb(177, 177, 177);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.dados-user{
+  margin-top: 20px;
+}
+.acoes-user{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  padding: 0px 10px;
+}
+.acoes-user .delete{
+  color: #D92B3A;
+}

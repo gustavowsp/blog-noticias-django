@@ -26,7 +26,7 @@ def login_user(request):
       user = form.get_user()
       login(request,user)
       messages.success(request,'Você está autenticado, parabéns!')
-      return redirect('users:create_perfil_user')
+      return redirect('users:dashboard')
     else:
       messages.error(request,'Os dados informados estão incorretos, tente novamente')
 

@@ -14,5 +14,14 @@ class PerfilUserBg(models.Model):
     verbose_name_plural = 'Planos de fundo'
   
   name_background = models.CharField(max_length=200)
-  background = models.ImageField(upload_to='perfil_bg')
+  background = models.ImageField(upload_to='dashboard_bg')
   utilizar = models.BooleanField(default=False)
+
+class BackgroundDashboard(models.Model):
+    class Meta:
+      verbose_name = 'Plano de fundo - Dash'
+      verbose_name_plural = 'Planos de fundo - Dash'
+    
+    name_background = models.CharField(max_length=200)
+    background = models.ImageField(upload_to='perfil_bg')
+    utilizar = models.BooleanField(default=False)

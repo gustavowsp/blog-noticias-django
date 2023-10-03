@@ -71,15 +71,18 @@
         </ul>
   
       </div>
+      <a href="{% url 'users:dashboard' %}">
       <div id="perfil">
-            <div class="img-user">
-              
-              {% if profile_photo.foto_perfil %}
-                <img src="{{profile_photo.foto_perfil.url}}" alt="">
-              {% endif %}
-            </div>
-            <span>Perfil</span>
+        
+          <div class="img-user">
+            
+            {% if profile_photo.foto_perfil %}
+              <img src="{{profile_photo.foto_perfil.url}}" alt="">
+            {% endif %}
           </div>
+          <span>Perfil</span>
+        </div>
+      </a>
     </nav>
     {% block 'navbar' %}{% endblock 'navbar' %}
   </div>

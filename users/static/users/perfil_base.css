@@ -1,0 +1,14 @@
+body{
+  background-color: #E6E6E6 !important;
+}
+#navbarbox{
+  height: 190px;
+  background-position: bottom;
+  background-size: cover;
+}
+#navbarNav{
+  font-size: 0.85em;
+  font-weight: 500;
+  opacity: 1;
+}
+

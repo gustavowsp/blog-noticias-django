@@ -13,4 +13,9 @@ urlpatterns = [
 
   #Perfil User
   path('data-perfil/', views.create_perfiluser, name='create_perfil_user'),
+  path('dashboard', views.dashboard_user, name='dashboard'),
+
+  # Alter User Data
+  path('data-user/', views.update_data_user, name='alter_data_user'),
+
 ]

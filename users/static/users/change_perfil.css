@@ -1,21 +1,12 @@
-body{
-  background-color: #E6E6E6 !important;
-}
-#navbarbox{
-  height: 190px;
-}
-
-#navbarbox, #navbarbox a{
-  color: white !important;
-}
-
-
 #Content{
   position: relative;
   top: -30px;
 }
-
+#navbarbox, #navbarbox a{
+  color: white !important;
+}
 .formbox{
+  overflow: hidden;
   background-color: #EBEBF2;
   padding: 15px;
   border-radius: 6px;
@@ -23,7 +14,7 @@ body{
 
 }
 .data_user{
-  min-height: 440px;
+
 
   display: flex;
   justify-content: center;
@@ -44,5 +35,5 @@ body{
   max-width: 320px;
   width: 48%;
   min-width: 50px;
-  height: 100px;
+
 }

@@ -1,0 +1,49 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+
+{% block 'css' %}
+<link rel="stylesheet" href="{% static 'users/dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'users/perfil_base.css' %}">
+{% endblock 'css' %}
+
+{% block 'body' %}
+
+<div id="sub-navbar">
+
+  <ul>
+    <li>Postagens</li>
+    <li>Comentários</li>
+  </ul>
+
+</div>
+<div id="content" class="container">
+
+  <div class="row">
+
+    <div class="col-4 content-box" id="perfilbox" >
+      <div class="conta">
+        <div class="img-user">
+          {% if perfil_user %}
+          <img src="{{perfil_user.foto_perfil.url}}" alt="">
+          {% endif %}
+        </div>
+        <div class="dados-user">
+          <h3>{{user.first_name}}</h3>
+          <p>{{perfil_user.descricao}}</p>
+        </div>
+        <div class="acoes-user">
+          <a href="{% url 'users:alter_data_user' %}">Atualizar Conta</a>
+          <a href="" class="delete">Deletar Conta</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-8 content-box" id="postagensbox" >
+      <h1>Postagens</h1>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock 'body' %}
